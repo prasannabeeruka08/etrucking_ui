@@ -1013,7 +1013,9 @@ Navbar
 .navbar-brand {
   padding: 0;
   line-height: 3.5rem;
-  white-space: nowrap; }
+  white-space: nowrap;
+  max-height: 3.5rem;
+}
 
 .navbar-brand {
   padding: 0;
