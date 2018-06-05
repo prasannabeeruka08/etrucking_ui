@@ -694,10 +694,16 @@
             
             </div>
           </div>
+          <form action="api/dropzone" class="dropzone white">
+            <div class="dz-message" data-ui-jp="dropzone" data-ui-options="{ url: 'api/dropzone' }">
+                <h4 class="m-t-lg m-b-md">Drop files here or click to upload.</h4>
+                <span class="text-muted block m-b-lg">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+            </div>
+          </form>
           <div class="form-group row m-t-lg">
-                <div class="col-sm-4 col-sm-offset-2">
-                  <button type="submit" class="btn white">Cancel</button>
-                  <button type="submit" class="btn btn-primary" id="AddNewCustomer">Save changes</button>
+                <div class="col-sm-offset-2">
+                  <button type="submit" style="float: left" class="btn white">Cancel</button>
+                  <button type="submit" style="float: right" class="btn btn-primary" id="AddNewCustomer">Save changes</button>
                 </div>
             </div>
 </div>
