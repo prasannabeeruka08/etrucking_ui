@@ -1865,7 +1865,6 @@ body {
     overflow: hidden; }
 
 .app-content {
-  box-shadow: none;
   padding: 0; }
   .app-content::after {
     content: "";
