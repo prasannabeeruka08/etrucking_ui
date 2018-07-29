@@ -1633,7 +1633,9 @@ Box
 .box-color {
   background-color: #fff;
   position: relative;
-  margin-bottom: 1.5rem; }
+  margin-bottom: 1.5rem; 
+  /* border: 3px solid #ff00bfe8; */
+}
 
 .box-header {
   position: relative;
@@ -1654,7 +1656,9 @@ Box
     opacity: 0.6; }
 
 .box-body {
-  padding: 1rem; }
+  padding: 1rem; 
+  /* border-top: 0.5px solid #ff00bf80; */
+}
 
 .box-footer {
   padding: 1rem; }
@@ -1672,7 +1676,8 @@ Box
 .box-shadow,
 .box-shadow .box,
 .box-shadow .box-color {
-  box-shadow: 0 2px 2px rgba(0, 0, 0, 0.03), 0 1px 0 rgba(0, 0, 0, 0.03); }
+  /* box-shadow: 0px 20px 20px 10px #ff00bf47, 0px 0px 20px 0px #ff00bf47 } */
+}
 
 .box-shadow-z0,
 .box-shadow-z0 .box,
@@ -1687,7 +1692,7 @@ Box
 .box-shadow-z2,
 .box-shadow-z2 .box,
 .box-shadow-z2 .box-color {
-  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15), 0 -1px 0px rgba(0, 0, 0, 0.02); }
+  /* box-shadow: 0px 0px 20px 4px #ff00bf47, 0px 0px 20px 4px #ff00bf47 } */}
 
 .box-shadow-z3,
 .box-shadow-z3 .box,
@@ -1861,7 +1866,6 @@ body {
     overflow: hidden; }
 
 .app-content {
-  box-shadow: none;
   padding: 0; }
   .app-content::after {
     content: "";
@@ -6507,3 +6511,17 @@ textarea.md-input {
       box-shadow: 0px 2px 5px 0 rgba(0, 0, 0, 0.26);
       -webkit-transition: all 0.2s;
       transition: all 0.2s; }
+
+      .photo-album{
+          background-color: #fff;
+          margin: 5px;
+      }
+      .photo-album2{
+        background-color: #fff;
+        margin: 5px;
+    }
+      .photo-img{
+        background-color: #fff;
+        height: 15rem;
+        width: 23rem;
+    }

@@ -44,3 +44,18 @@
     transform: rotate(359deg);
   }
 }
+
+.addNew{
+  z-index: 1000;
+    position: fixed;
+    top: 80px;
+    right: 0px;
+    width: 240px;
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border-radius: 50%;
+}
+.customerTable{
+  margin-top: -10px;
+}
