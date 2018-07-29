@@ -496,7 +496,9 @@
                 <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
                   <i class="ion-navicon"></i>
                 </a>
-                <div class="navbar-item pull-left h5" id="pageTitle">New Customer</div>
+                <div class="navbar-item pull-left h5" id="pageTitle">
+                  <a class="md-btn md-fab m-b-sm indigo" href="customers.html"><i class="fa fa-hand-o-left"></i></a>
+                </div>
                 <!-- nabar right -->
                 <ul class="nav navbar-nav pull-right">
                   <li class="nav-item dropdown pos-stc-xs">
@@ -598,100 +600,184 @@
 <!-- ############ PAGE START-->
 <!-- only need a height for layout 4 -->
 <div class="padding">
-
-    <form data-ui-jp="parsley">
-        <div class="box">
-          <div class="box-header">
-                        
-                      <h2> <a href="datatable.html" class="btn btn-sm btn-icon indigo">
-                            <i class="fa fa-hand-o-left"></i>
-                    </a> Customer Details</h2>
-                  <!-- <div class="col-md-6"><p class="infoText"><span style="color: red">*</span>Please fill the information to continue</p></div> -->
-              
-            
-          </div>
-          <div class="box-body">
-            <div class="row form-group">
-            <div class=" col-md-8">
-              <!-- <label>Customer Name</label> -->
-              <input type="text" class="form-control" placeholder="Customer Name" required>                        
-            </div>
-            <div class="col-md-4">
-                    <!-- <label>Customer Name</label> -->
-                    <input type="text" class="form-control" placeholder="Customer ID" required readonly>                        
-                  </div>
-            </div>
-            <div class="row form-group">
-            <div class="col-md-8">
-              <!-- <label>Email</label> -->
-              <input type="email" class="form-control" placeholder="Customer Email" required>                        
-            </div>
-            <div class="col-md-4">
-                    <!-- <label>Phone</label> -->
-                    <input type="number" class="form-control" placeholder="XXX XXXX XXX" required>
-                  </div>
-            </div>
-            <div class="row form-group">
-                    <p style="padding-left :1rem;">Mailing Address</p>
+        <h6 class="_600 m-v-lg">New Customer Details</h6>
+        <div class="m-b-sm row">
+          <div class="col-sm-10 col-sm-offset-2">
+            <div class="row row-sm">
+              <!-- <div class="col-sm-12">
+                <div class="md-form-group">
+                  <input class="md-input" disabled>
+                  <label></label>
+                </div>
+              </div> -->
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Address 1" required>   
+                <div class="md-form-group ">
+                  <input id="customerId" class="md-input" value="123456" disabled>
+                  <label>Customer ID</label>
+                </div>
               </div>
               <div class="col-sm-6">
-                <input type="text" class="form-control" placeholder="Address 2" required>      
-              </div>   
+                <div class="md-form-group float-label">
+                  <input id="customerName" class="md-input" required>
+                  <label>Customer Name</label>
+                </div>
+              </div>
+              <div class="col-sm-12">
+                <div class="md-form-group">
+                  <input id="address" class="md-input">
+                  <label>Address</label>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="md-form-group">
+                  <input id="city" class="md-input">
+                  <label>City</label>
+                  <span class="md-input-msg right">30/30</span>
+                </div>
+              </div>
+              <div class="col-sm-4">
+                <div class="md-form-group">
+                  <input id="state" class="md-input">
+                  <label>State</label>
+                </div>
+              </div>
+    
+              <div class="col-sm-4">
+                <div class="md-form-group">
+                  <input id="zipcode" class="md-input">
+                  <label>Postal Code</label>
+                </div>
+              </div>
+    
+              <div class="col-sm-12">
+                <div class="md-form-group">
+                  <textarea id="notes" class="md-input" rows="4"></textarea>
+                  <label>Notes</label>
+                </div>
+              </div>
+              <h6 class="_600 m-v-lg">Contact Details</h6>
+            <div class="row row-sm">
+                <div class="col-sm-10 col-sm-offset-2">
+                <div class="col-sm-6">
+                  <div class="md-form-group float-label">
+                    <input id="phone1" class="md-input" required>
+                    <label>Phone </label>
+                  </div>
+                </div>
+                <div class="col-sm-6">
+                  <div class="md-form-group float-label">
+                    <input id="email1" class="md-input" required>
+                    <label>email</label>
+                  </div>
+                </div>
+                <div id="NewContactDetails"></div>
+                </div>
             </div>
-            <div class="row form-group">
-                    <div class="col-sm-6">
-                      <input type="text" class="form-control" placeholder="City" required>   
-                    </div>
-                    <div class="col-sm-3">
-                      <input type="text" class="form-control" placeholder="State" required>      
-                    </div> 
-                    <div class="col-sm-3">
-                            <input type="number" class="form-control" placeholder="Zip" required>   
-                    </div>  
+            <div class="row row-sm">
+              <div class="col-sm-10 col-sm-offset-2">
+              <div class="col-sm-6">
+                <div class="md-form-group float-label">
+                  <input id="phone2" class="md-input" required>
+                  <label>Phone </label>
                 </div>
-                <div class="row form-group">
-                    <p style="padding-left :1rem;">Other Contact information</p>
-                    <div class="form-group col-md-8">
-                        <!-- <label>Email</label> -->
-                        <input type="email" class="form-control" placeholder="Customer Email" >                        
-                    </div>
-                    <div class="form-group col-md-4">
-                            <!-- <label>Phone</label> -->
-                            <input type="number" class="form-control" placeholder="XXX XXXX XXX -- Extension" >
-                    </div>
-                    <div class="col-md-8">
-                        <!-- <label>Email</label> -->
-                        <input type="email" class="form-control" placeholder="Customer Email" >                        
-                    </div>
-                    <div class="col-md-4">
-                        <!-- <label>Phone</label> -->
-                        <input type="number" class="form-control" placeholder="XXX XXXX XXX -- Extension" >
-                    </div>
+              </div>
+              <div class="col-sm-6">
+                <div class="md-form-group float-label">
+                  <input id="email2" class="md-input" required>
+                  <label>email</label>
                 </div>
-                <div class="form-group">
-                        <label>Notes</label> 
-                    <textarea  class="form-control" placeholder="Notes" rows="5"></textarea>                    
-                </div>
-            <!-- <div class="checkbox">
-              <label class="ui-check">
-                <input type="checkbox" name="check" checked required="true"><i></i> I agree to the <a href="#" class="text-info">Terms of Service</a>
-              </label>
-            </div> -->
+              </div>
+              <div id="NewContactDetails"></div>
+              </div>
           </div>
-          <div class=" p-a text-right">
-            <button type="submit" class="btn info">Submit</button>
+            </div>
+            
+            </div>
+            <div class="col-md-2">
+              <h6 class="_600 m-v-lg">Check List</h6>
+              <p>
+                <label class="md-check">
+                  <input type="checkbox" >
+                  <i class="green"></i>
+                    Doc 1
+                </label>
+              </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" >
+                    <i class="green"></i>
+                      Doc 2
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" >
+                    <i class="green"></i>
+                      Doc 3
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" >
+                    <i class="green"></i>
+                      Doc 4
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" checked="">
+                    <i class="green"></i>
+                      Doc 5
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" checked="">
+                    <i class="green"></i>
+                      Doc 6
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" checked="">
+                    <i class="green"></i>
+                      Doc 7
+                  </label>
+                </p>
+              <p>
+                  <label class="md-check">
+                    <input type="checkbox" checked="">
+                    <i class="green"></i>
+                      Doc 8
+                  </label>
+                </p>      
+            </div>
           </div>
+          <div class="m-b-md">
+          <form action="api/dropzone" class="dropzone white">
+            <div class="dz-message" data-ui-jp="dropzone" data-ui-options="{ url: 'api/dropzone' }">
+                <h4 class="m-t-lg m-b-md">Drop files here or click to upload.</h4>
+                <span class="text-muted block m-b-lg">(This is just a demo dropzone. Selected files are <strong>not</strong> actually uploaded.)</span>
+            </div>
+          </form>
         </div>
-      </form>
+          <h6 class="_600 m-v-lg"> Progress </h6>
+          <div class="progress progress-striped active">
+              <div class="progress-bar info" style="width: 50%">50%</div>
+            </div>
+          <div class="form-group row m-t-lg">
+                <div class="col-sm-offset-2">
+                  <button type="submit" style="float: left" class="btn white">Cancel</button>
+                  <button type="submit" style="float: right" class="btn btn-primary" id="AddNewCustomer">Save changes</button>
+                </div>
+            </div>
 </div>
 
 <!-- ############ PAGE END-->
 
     </div>
   </div>
-  <!-- / -->
+  <!--end of content-->
 
   
   <!-- ############ SWITHCHER START-->
@@ -803,6 +889,7 @@
   <script src="scripts/ui-taburl.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/ajax.js"></script>
+  <script src="scripts/customers.js"></script>
 <!-- endbuild -->
 </body>
 </html>
