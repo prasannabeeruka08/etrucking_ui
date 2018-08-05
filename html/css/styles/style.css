@@ -65,3 +65,19 @@
   opacity: 0.6;
   margin-bottom: 0px !important;
 }
+
+.jobs{
+  z-index: 1000;
+  position: fixed;
+  top: 200px;
+  right: 20px;
+  -webkit-transition: right 0.2s ease;
+  transition: right 0.2s ease;
+  border: 1px solid rgba(120, 120, 120, 0.1);
+  background-clip: padding-box;
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  border-radius: 50%;
+  font-size: 25px;
+}

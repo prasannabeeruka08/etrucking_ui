@@ -30,6 +30,8 @@
   <link rel="stylesheet" href="css/styles/style.css" type="text/css" />
   <!-- endbuild -->
   <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
+
+  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" type="text/css" />
 </head>
 <body>
   <div class="app" id="app">
@@ -675,12 +677,59 @@
             <h3>Job Details </h3>
         </div>
         <div class="box-body">
-            
+
         </div>
     </div>
 
 
 </div>
+
+    <button class="mb-btn mb-fab m-b-lg jobs red" data-toggle="modal" data-target="#m-md">Jobs </button>
+
+<!-- large modal -->
+<div id="m-md" class="modal black-overlay fade" data-backdrop="true">
+        <div class="modal-dialog modal-lg">
+          <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title">Large modal</h5>
+            </div>
+            <div class="modal-body text-center p-lg">
+              <table id="jobs">
+                  <thead> 
+                      <th>id</th>
+                      <th>job name</th>
+                      <th> job location</th>
+                      <th> job type</th>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td> 1</td>
+                            <td>test 1</td>
+                            <td> test 1</td>
+                            <td> hourly</td>
+                        </tr>
+                        <tr>
+                                <td> 2</td>
+                                <td>test 2</td>
+                                <td> test 2</td>
+                                <td> dump</td>
+                        </tr>
+                        <tr>
+                                <td> 3</td>
+                                <td>test 3</td>
+                                <td> test 3</td>
+                                <td> load</td>
+                        </tr>
+                    </tbody>
+              </table>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn dark-white p-x-md" data-dismiss="modal">No</button>
+              <button type="button" class="btn danger p-x-md" data-dismiss="modal">Yes</button>
+            </div>
+          </div><!-- /.modal-content -->
+        </div>
+      </div>
 
 <!-- ############ PAGE END-->
 
@@ -798,6 +847,9 @@
   <script src="scripts/ui-taburl.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/ajax.js"></script>
+  <script src="scripts/datatable.js"></script>
+  <script src="scripts/jquery.datatable.min.js"></script>
+  <script src="scripts/customer.js"></script>
 <!-- endbuild -->
 </body>
 </html>
