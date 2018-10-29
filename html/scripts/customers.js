@@ -1,30 +1,55 @@
-$(document).ready(function(){
+$(document).ready(function() {
 
-    $("#getdata").click(function(){
-        alert("test");
-        $.ajax({url: "http://localhost:3000/api/contacts", success: function(result){
-            alert(result);
-            console.log(result);
-            $("#div1").html(result);
+
+    $.ajax({url: "http://localhost:3000/cust/customers", success: function(result){
+        $("#d_tbody").empty();
+            $.each(result, function(key, val){
+                var cId, cName,cLocation, dstatus;
+                $.each(val, function(k, vals){
+                    if (k== "customer_id"){
+                        cId = vals;
+                    }else if(k== 'customer_name'){
+                        cName = vals;
+                    }else if (k== "customer_location"){
+                        cLocation = vals;
+                    }else if(k == 'status'){
+                         dstatus = vals;
+                    }else{
+                        
+                    }
+                });
+                var avail = '<div class="dropdown inline"><button class="btn btn-success dropdown-toggle" data-toggle="dropdown">'
+                +dstatus+' </button>'
+                +'<div class="dropdown-menu pull-right">'
+                +' <a class="dropdown-item" href="#">Available</a>'
+                +'  <a class="dropdown-item" href="#">Assigned</a>'
+                +'  <a class="dropdown-item" href="#">in-progress</a>'
+                +'</div>';
+                var assig = '<div class="dropdown inline"><button class="btn btn-info dropdown-toggle" data-toggle="dropdown">'
+                +dstatus+' </button>'
+                +'<div class="dropdown-menu pull-right">'
+                +' <a class="dropdown-item" href="#">Available</a>'
+                +'  <a class="dropdown-item" href="#">Assigned</a>'
+                +'  <a class="dropdown-item" href="#">inactive</a>'
+                +'</div>';
+                var inactive = '<div class="dropdown inline"><button class="btn btn-danger dropdown-toggle" data-toggle="dropdown">'
+                +dstatus+' </button>'
+                +'<div class="dropdown-menu pull-right">'
+                +' <a class="dropdown-item" href="#">Available</a>'
+                +'  <a class="dropdown-item" href="#">Assigned</a>'
+                +'  <a class="dropdown-item" href="#">inactive</a>'
+                +'</div>';
+                var statusbtn;
+                if(dstatus == 'active'){
+                    statusbtn = avail
+                }else if(dstatus == 'closed'){
+                    statusbtn = inactive
+                }
+                var row = "<tr><td>"+cId+"</td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
+                    $("#d_tbody").append(row);
+            });
+            $("#driver_table").DataTable();
         }});
-    });
-    var counter = 0;
-    $("#AddNewContactDetails").click(function(){
-        var div = '<div class="col-sm-6"><div class="md-form-group"><input class="md-input" id = "contact'+counter+'" placeholder="Phone / Email"></div></div><div class="col-sm-6"><div class="md-form-group"><input id = "details'+counter+'" class="md-input"></div></div>';
-        counter ++;
-        $("#NewContactDetails").append(div);
-    });
-    $("#AddNewCustomer").click(function(){
-        var customerId = $("#customerId").val(),
-        customerName = $("#customerName").val(),
-        address = $("#address").val(),
-        city = $("#city").val(),
-        state = $("#state").val(),
-        zipcode = $("#zipcode").val(),
-        notes = $("#notes").val(),
-        phone1 = $("#phone1").val(),
-        phone2 = $("#phone2").val(),
-        email1 = $("#email1").val(),
-        email2 = $("#email2").val();
-    });
-});
+
+    
+} );

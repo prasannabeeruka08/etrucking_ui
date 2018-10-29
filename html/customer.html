@@ -31,7 +31,8 @@
   <!-- endbuild -->
   <link rel="stylesheet" href="css/styles/font.css" type="text/css" />
 
-  <link rel="stylesheet" href="https://cdn.datatables.net/1.10.19/css/jquery.dataTables.min.css" type="text/css" />
+  <link rel="stylesheet" href="libs/DataTables/datatables.css" type="text/css" />
+
 </head>
 <body>
   <div class="app" id="app">
@@ -498,7 +499,7 @@
                 <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
                   <i class="ion-navicon"></i>
                 </a>
-                <div class="navbar-item pull-left h5" id="pageTitle">Customer Details</div>
+                <div class="navbar-item pull-left h5" id="pageTitle">XXX Jobs</div>
                 <!-- nabar right -->
                 <ul class="nav navbar-nav pull-right">
                   <li class="nav-item dropdown pos-stc-xs">
@@ -600,136 +601,27 @@
 <!-- ############ PAGE START-->
 <!-- only need a height for layout 4 -->
 <div class="padding">
-    <div class="row">
-        <div class="col-md-6">
-            <div class="box">
-                <div class="box-header">
-                    <h3>Customer Name</h3>
-                </div>
-                <div class="box-body">
-                    <div class="row">
-                        <div class="col-md-3">
-                            <label> ID</label>
-                        </div>
-                        <div class="col-md-9">
-                            <p>1220 </p>
-                        </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-3">
-                                <label>email</label>
-                            </div>
-                            <div class="col-md-9">
-                                <p>test@email.com </p>
-                            </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-3">
-                                <label>Phone</label>
-                            </div>
-                            <div class="col-md-9">
-                                <p>(123) 456-7890</p>
-                            </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-3">
-                                <label>address</label>
-                            </div>
-                            <div class="col-md-9">
-                                <p>1 test Dr </p>
-                                <p>test Center CA 00000 </p> 
-                            </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-3">
-                                <label>Other Info</label>
-                            </div>
-                            <div class="col-md-9">
-                                <p>test1@email.com (234) 764- 7684 </p> 
-                                <p>test4@email.com (234) 764- 7684</p> 
-                            </div>
-                    </div>
-                    <div class="row">
-                            <div class="col-md-3">
-                                <label>Notes</label>
-                            </div>
-                            <div class="col-md-9">
-                                <textarea class="form-control" rows="5" readonly></textarea>
-                            </div>
-                    </div>
-                    
-                </div>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="box">
-                <div class="box-header">
-                    <h3>Documets</h3>
-                </div>
-                <div class="box-body">
-
-                </div>
-            </div>
-        </div>
-    </div>
     <div class="box">
-        <div class="box-header">
-            <h3>Job Details </h3>
-        </div>
-        <div class="box-body">
-
-        </div>
+      <div class="table-responsive">
+      <table id="driver_table" class="table table-striped b-t">
+        <thead>
+          <tr>
+          <!-- <th>customer_id</th>
+          <th>customer_name</th> -->
+          <th>Cutomer ID</th>
+          <th>Customer Name</th>
+          <th>Customer Location</th>
+          <th>Status</th>
+        </tr>
+        </thead>
+        <tbody id="d_tbody">
+          
+        </tbody>
+        </table>
+      </div>
     </div>
-
 
 </div>
-
-    <button class="mb-btn mb-fab m-b-lg jobs red" data-toggle="modal" data-target="#m-md">Jobs </button>
-
-<!-- large modal -->
-<div id="m-md" class="modal black-overlay fade" data-backdrop="true">
-        <div class="modal-dialog modal-lg">
-          <div class="modal-content">
-            <div class="modal-header">
-                <h5 class="modal-title">Large modal</h5>
-            </div>
-            <div class="modal-body text-center p-lg">
-              <table id="jobs">
-                  <thead> 
-                      <th>id</th>
-                      <th>job name</th>
-                      <th> job location</th>
-                      <th> job type</th>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td> 1</td>
-                            <td>test 1</td>
-                            <td> test 1</td>
-                            <td> hourly</td>
-                        </tr>
-                        <tr>
-                                <td> 2</td>
-                                <td>test 2</td>
-                                <td> test 2</td>
-                                <td> dump</td>
-                        </tr>
-                        <tr>
-                                <td> 3</td>
-                                <td>test 3</td>
-                                <td> test 3</td>
-                                <td> load</td>
-                        </tr>
-                    </tbody>
-              </table>
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn dark-white p-x-md" data-dismiss="modal">No</button>
-              <button type="button" class="btn danger p-x-md" data-dismiss="modal">Yes</button>
-            </div>
-          </div><!-- /.modal-content -->
-        </div>
-      </div>
 
 <!-- ############ PAGE END-->
 
@@ -822,6 +714,9 @@
 <!-- build:js scripts/app.min.js -->
 <!-- jQuery -->
   <script src="libs/jquery/dist/jquery.js"></script>
+  <!-- <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> -->
+  
+  <script src="libs/DataTables/datatables.js"></script>
 <!-- Bootstrap -->
   <script src="libs/tether/dist/js/tether.min.js"></script>
   <script src="libs/bootstrap/dist/js/bootstrap.js"></script>
@@ -847,9 +742,8 @@
   <script src="scripts/ui-taburl.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/ajax.js"></script>
-  <script src="scripts/datatable.js"></script>
-  <script src="scripts/jquery.datatable.min.js"></script>
-  <script src="scripts/customer.js"></script>
+  
+  <script src="scripts/customers.js"></script>
 <!-- endbuild -->
 </body>
 </html>

@@ -6,17 +6,13 @@ $(document).ready(function() {
             $.each(result, function(key, val){
                 var cId, cName,jId,jLocation, jName,sdate, dstatus;
                 $.each(val, function(k, vals){
-                    if (k== "customer_id"){
-                        cId = vals;
-                    } else if(k== 'customer_name'){
-                        cName = vals;
-                    }if (k== "job_id"){
+                    if (k== "job_id"){
                         jId = vals;
-                    } else if(k== 'job_location'){
+                    }else if(k== 'job_location'){
                         jLocation = vals;
-                    }if (k== "job_name"){
+                    }else if (k== "job_name"){
                         jName = vals;
-                    } else if(k== 'start_date'){
+                    }else if(k== 'start_date'){
                         sdate = vals;
                     }else if(k == 'status'){
                          dstatus = vals;
@@ -51,7 +47,7 @@ $(document).ready(function() {
                 }else if(dstatus == 'closed'){
                     statusbtn = inactive
                 }
-                var row = "<tr><td>"+cId+"</td><td>"+cName+"</td><td>"+jId+"</td><td>"+jName+"</td><td>"+jLocation+"</td><td>"+sdate+"</td><td>"+statusbtn+"</td></tr>";
+                var row = "<tr><td>"+jId+"</td><td>"+jName+"</td><td>"+jLocation+"</td><td>"+sdate+"</td><td>"+statusbtn+"</td></tr>";
                     $("#d_tbody").append(row);
             });
             $("#driver_table").DataTable();
