@@ -52,5 +52,30 @@ $(document).ready(function() {
             $("#driver_table").DataTable();
         }});
 
+        $("#saveDriver").click(function(){
+
+            var driver = {
+                driver_id: $("#driver_id").val(),
+                driver_name:$("#driver_name").val(),
+                tt:$("#truck_type").val(),
+                status:"available"
+            }
+            $.ajax({
+                url: "http://localhost:3000/dri/driver", 
+                data: JSON.stringify(driver),
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',    
+                success: function(result){
+                    if(result.msg == "success"){
+                        alert("contact added successfully");
+                        location.reload();
+                    }else{
+                        alert(result.msg);
+                        console.log(result.msg);
+                    }      
+                }
+        });
+        });
     
 } );

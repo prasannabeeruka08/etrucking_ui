@@ -45,7 +45,7 @@
   }
 }
 
-.addNew{
+.addNew1{
   z-index: 1000;
     position: fixed;
     top: 80px;
@@ -80,4 +80,8 @@
   border-radius: 50%;
   border-radius: 50%;
   font-size: 25px;
+}
+.addNew{
+  text-align: right;
+  padding: 1%;
 }
