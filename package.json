@@ -13,13 +13,19 @@
     "ejs": "^2.3.1",
     "express": "^4.12.1",
     "include-tag": "^1.1.0",
-    "cryptiles": ">=4.1.2"
+    "cryptiles": ">=4.1.2",
+    "lodash": ">=4.17.5",
+    "minimatch": ">=3.0.2",
+    "mime": ">=1.4.1"
   },
   "devDependencies": {
     "grunt": "^0.4.5",
     "grunt-assemble": "^0.4.0",
     "grunt-bump": "0.0.15",
     "cryptiles": ">=4.1.2",
+    "lodash": ">=4.17.5",
+    "minimatch": ">=3.0.2",
+    "mime": ">=1.4.1",
     "grunt-contrib-clean": "^0.6.0",
     "grunt-contrib-concat": "^0.5.0",
     "grunt-contrib-copy": "^0.5.0",
