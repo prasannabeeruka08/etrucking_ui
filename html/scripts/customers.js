@@ -50,6 +50,30 @@ $(document).ready(function() {
             });
             $("#driver_table").DataTable();
         }});
+        $("#saveDriver").click(function(){
 
+            var customer = {
+                customer_id: $("#customer_id").val(),
+                customer_name:$("#customer_name").val(),
+                customer_location:$("#clocation").val(),
+                status:"active"
+            }
+            $.ajax({
+                url: "http://localhost:3000/cust/customer", 
+                data: JSON.stringify(customer),
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',    
+                success: function(result){
+                    if(result.msg == "success"){
+                        alert("contact added successfully");
+                        location.reload();
+                    }else{
+                        alert(result.msg);
+                        console.log(result.msg);
+                    }      
+                }
+        });
+        });
     
 } );
