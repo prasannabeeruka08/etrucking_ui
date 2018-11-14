@@ -45,7 +45,7 @@ $(document).ready(function() {
                 }else if(dstatus == 'closed'){
                     statusbtn = inactive
                 }
-                var row = "<tr><td>"+cId+"</td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
+                var row = "<tr class='newpage'><td id='newclick' class = 'newclick'>"+cId+"</td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
                     $("#d_tbody").append(row);
             });
             $("#driver_table").DataTable();
@@ -75,5 +75,10 @@ $(document).ready(function() {
                 }
         });
         });
-    
+
+        $("#newclick").click(function() {
+           // window.document.location = $(this).data("href");
+          alert("test");
+        });
+
 } );

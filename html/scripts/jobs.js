@@ -53,5 +53,33 @@ $(document).ready(function() {
             $("#driver_table").DataTable();
         }});
 
+        $("#savejob").click(function(){
+            var startdate = $("#mm").val()+"/"+$("#dd").val()+"/"+$("#yyyy").val();
+            var name = $("#cname").text();
+            var customer = {
+                customer_name : $("#cname").text(),
+                customer_id : $("#cid").text(),
+                job_name: $("#job_name").val(),
+                job_location:$("#jlocation").val(),
+                start_date:startdate,
+                status:"running"
+            }
+            $.ajax({
+                url: "http://localhost:3000/job/job", 
+                data: JSON.stringify(customer),
+                type: 'post',
+                dataType: 'json',
+                contentType: 'application/json',    
+                success: function(result){
+                    if(result.msg == "success"){
+                        alert("contact added successfully");
+                        location.reload();
+                    }else{
+                        alert(result.msg);
+                        console.log(result.msg);
+                    }      
+                }
+        });
+        });
     
 } );

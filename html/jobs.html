@@ -499,7 +499,7 @@
                 <a data-toggle="modal" data-target="#aside" class="navbar-item pull-left hidden-lg-up p-r m-a-0">
                   <i class="ion-navicon"></i>
                 </a>
-                <div class="navbar-item pull-left h5" id="pageTitle">XXX Jobs</div>
+                <div class="navbar-item pull-left h5" id="pageTitle"><span id="customer_name">test 1</span> <span id="customer_id">1000</span></div>
                 <!-- nabar right -->
                 <ul class="nav navbar-nav pull-right">
                   <li class="nav-item dropdown pos-stc-xs">
@@ -602,16 +602,19 @@
 <!-- only need a height for layout 4 -->
 <div class="padding">
     <div class="box">
+        <div class="addNew">
+            <button class="btn btn-outline rounded b-primary text-primary" data-toggle="modal" data-target="#m-a-a" data-ui-toggle-class="fade-up" data-ui-target="#animate">Add New</button>
+          </div>
       <div class="table-responsive">
       <table id="driver_table" class="table table-striped b-t">
         <thead>
           <tr>
           <!-- <th>customer_id</th>
           <th>customer_name</th> -->
-          <th>job_id</th>
-          <th>job_name</th>
-          <th>job_location</th>
-          <th>start_date</th>
+          <th>Job ID</th>
+          <th>Job Name</th>
+          <th>Job Location</th>
+          <th>Start Date</th>
           <th>Status</th>
         </tr>
         </thead>
@@ -624,6 +627,46 @@
 
 </div>
 
+
+<!-- .modal -->
+<div id="m-a-a" class="modal fade animate" data-backdrop="true">
+    <div class="modal-dialog" id="animate">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">New Job <span id="cname" value="test 1" >test 1</span> <span id="cid">1000</span> </h5>
+        </div>
+        <div class="modal-body text-center p-lg">
+            <div class="form-group row">
+                <label class="col-sm-2 form-control-label">Name</label>
+                <div class="col-sm-10">
+                  <input type="text" id="job_name" class="form-control">
+                </div>
+              </div>
+            <div class="form-group row">
+                <label class="col-sm-2 form-control-label">location</label>
+                <div class="col-sm-10">
+                  <input type="text" id="jlocation" class="form-control">
+                </div>
+              </div> 
+            <div class="form-group row">
+                <label class="col-sm-2 form-control-label">Start Date</label>
+                <div class="col-sm-10 "> 
+                  <input type="text" id="mm" placeholder="MM"  maxlength="2" class="date col-sm-3">
+                  <p class="col-md-1 date" style="border:none">/</p>
+                  <input type="text" id="dd" placeholder="DD"  maxlength="2" class="date col-sm-3">
+                  <p class="col-md-1 date" style="border:none">/</p>
+                  <input type="text" id="yyyy" placeholder="YYYY" maxlength="4" class="date col-sm-4">
+                </div>
+              </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn danger p-x-md" data-dismiss="modal">cancel</button>
+          <button type="button" id="savejob" class="btn success p-x-md" data-dismiss="modal">Save</button>
+        </div>
+      </div><!-- /.modal-content -->
+    </div>
+  </div>
+  <!-- / .modal -->
 <!-- ############ PAGE END-->
 
     </div>
@@ -743,7 +786,7 @@
   <script src="scripts/ui-taburl.js"></script>
   <script src="scripts/app.js"></script>
   <script src="scripts/ajax.js"></script>
-  
+  <script src="libs/jquery.datetimepicker.full.js"></script>
   <script src="scripts/jobs.js"></script>
 <!-- endbuild -->
 </body>
