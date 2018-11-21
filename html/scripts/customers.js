@@ -45,7 +45,13 @@ $(document).ready(function() {
                 }else if(dstatus == 'closed'){
                     statusbtn = inactive
                 }
-                var row = "<tr class='newpage'><td id='newclick' class = 'newclick'>"+cId+"</td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
+                var row = "<tr class='newpage'><td id='newclick' class = 'newclick'><p><u>"+cId+"</u><p></td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
+                    $("#d_tbody").append(row);
+                     $("p").click(function(){
+                        $(".box").hide();   
+                        $("#boxCustDetls").css(style="display: block");
+       			 });
+                // var row = "<tr class='newpage'><td id='newclick' class = 'newclick'><a href='https://www.w3schools.com/html/'>"+cId+"</a></td><td>"+cName+"</td><td>"+cLocation+"</td><td>"+statusbtn+"</td></tr>";
                     $("#d_tbody").append(row);
             });
             $("#driver_table").DataTable();
